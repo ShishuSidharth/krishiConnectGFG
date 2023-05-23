@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> KrishiConnect</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  <link rel="stylesheet" href="stylehome.css" type="text/css">
+  <link rel="stylesheet" href="style2.css" type="text/css" media="screen and (max-width: 1060px" )>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="krishiconnect-high-resolution-logo-color-on-transparent-background (1).png" alt="Bootstrap"
+            width="40" height="40">
+        </a>
+      </div>
+      <a class="navbar-brand" href="#">KrishiConnect</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="home.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="schemes.html">Schemes</a>
+          </li>
+          <li class="navbar-item">
+            <button class="nav-link" id="logout"
+              style="background-color: rgba(224, 0, 0, 0.7); border-radius: 3px; color: aliceblue;"
+              onclick="logout(event)">LogOut</button>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <h1 style="margin-top: 50px;">Welcome <span id="displayname"></span></h1>
+  <h2 style="margin-top: 10px;">You mean a lot to Us :) </h2>
+  <div class="dashboard" style="background-color: rgba(249, 249, 249, 0.5); padding: 30px;">
+    <!-- Dashboard Section -->
+    <section id="progspace">
+
+      <!-- next circle -->
+      <!-- <div class="outcircle c1"> -->
+      <!-- <div class="incircle">
+  
+               <span class="prod">Potato</span>
+            </div>
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+              <defs>
+                <linearGradient id="GradientColor">
+                  <stop offset="0%" stop-color="blue" />
+                  <stop offset="100%" stop-color="aqua" />
+                </linearGradient>
+              </defs>
+              <circle cx="80" cy="80" r="70" stroke-linecap="round" />
+            </svg>
+  
+          </div>
+  
+  
+          <section class="skillname">
+            <h2>Frontend Devlopment</h2>
+            <p>I am a frontend devloper with skills in HTML, CSS, Javascript.</p>
+          </section>
+        </div> -->
+
+      <!-- Weaather -->
+
+      <div class="card mb-4 rounded-3 shadow-sm" style="background-color: rgba(196, 91, 10, 0.2); max-width: 50%;">
+        <div class="card-header py-3" style="background-color: rgba(171, 104, 26, 0.2); color: aliceblue;">
+          <h4 class="my-0 fw-normal">Jamshedpur</h4>
+        </div>
+        <div class="card-body" style="background-color: rgba(84, 84, 84, 0.2); color:aliceblue;">
+          <h1 class="card-title pricing-card-title"><span id="temp"></span>°C<small class="text-body-secondary"
+              style="color: aliceblue;"></small></h1>
+          <ul class="list-unstyled mt-3 mb-4">
+            <li>Feels Like : <span id="feels_like"></span> </li>
+            <li>Cloud PCT : <span id="cloud_pct"></span> </li>
+            <li>Minimum Temperature : <span id="min_temp"></span></li>
+            <li>Maximum Temperature : <span id="max_temp"></span></li>
+            <li>Humidity :<span id="humidity"></span> </li>
+          </ul>
+          <!-- <button type="button" class="w-100 btn btn-lg btn-outline-primary">Sign up for free</button> -->
+        </div>
+      </div>
+
+      <!-- News -->
+      <div class="card mb-4 rounded-3 shadow-sm" id="newssection"
+        style="background-color: rgba(84, 84, 84, 0.4); color:aliceblue; max-width: 50%; ">
+        <div class="card-header py-3" style="background-color: rgba(171, 104, 26, 0.4); color: aliceblue;">
+          <h4 class="my-0 fw-normal text-center">News Section</h4>
+        </div>
+        <ul class="list-unstyled mt-3 mb-4" style="padding: 10px; ">
+          <li class="headline"><span class="col" id="news" style="color: aliceblue; font-size: 18px;"></span></li>
+          <li class="headline"><span class="col" id="news2" style="color: aliceblue; font-size: 18px;"></span></li>
+          <li class="headline"><span class="col" id="news3" style="color: aliceblue; font-size: 18px;"></span></li>
+          <li class="headline"><span class="col" id="news4" style="color: aliceblue; font-size: 18px;"></span></li>
+          <li class="headline"><span class="col" id="news5" style="color: aliceblue; font-size: 18px;"></span></li>
+        </ul>
+      </div>
+
+      <!-- Sales -->
+      <div class="card mb-4 rounded-3 shadow-sm" id="sales"
+        style="background-color: rgba(84, 84, 84, 0.4); color:aliceblue; ">
+        <div class="card-header py-3" style="background-color: rgba(171, 104, 26, 0.4); color: aliceblue;">
+          <h4 class="my-0 fw-normal text-center">Your Sales</h4>
+        </div>
+        <div style="display: flex; flex-wrap: wrap; justify-content: space-between;">
+          <div class="outcircle c1" style="margin: 20px;">
+            <div class="incircle">
+
+              <span style="font-size: 14px; font-weight: bold;">Last<br>Month</span>
+            </div>
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+              <defs>
+                <linearGradient id="GradientColor">
+                  <stop offset="0%" stop-color="bisque" />
+                  <stop offset="100%" stop-color="aliceblue" />
+                </linearGradient>
+              </defs>
+              <circle cx="80" cy="80" r="70" stroke-linecap="round" />
+            </svg>
+          </div>
+
+          <div class="outcircle c2" style="margin: 20px;">
+            <div class="incircle">
+
+              <span style="font-size: 14px; font-weight: bold;">Average</span>
+            </div>
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+              <defs>
+                <linearGradient id="GradientColor">
+                  <stop offset="0%" stop-color="bisque" />
+                  <stop offset="100%" stop-color="aliceblue" />
+                </linearGradient>
+              </defs>
+              <circle cx="80" cy="80" r="70" stroke-linecap="round" />
+            </svg>
+          </div>
+        </div>
+        <section class="skillname">
+          <h4>Last Month Sales : <span id="msale"></span></h4>
+          <h4>Average Sales : <span id="avgsale"></span></h4>
+
+        </section>
+
+      </div>
+
+    </section>
+    </div>
+    <div class="upper" >
+      <h1 id="heading">List your Products Here</h1>
+      <form id="productform"><br><br>
+
+        <input type="text" id="Product" style="height: 50px; width: 600px; max-width: 85%;" name="product"
+          placeholder="Product"><br><br>
+
+
+        <select class="form-select" style="height: 50px; width: 600px; max-width: 85%;" id="category"
+          aria-label="Default select example">
+          <option value="Vegetables" selected>Open this select menu</option>
+          <option>Vegetables</option>
+          <option value="Oils">Oils</option>
+          <option value="Herbs">Herbs</option>
+          <option value="Dairy Products">Dairy Products</option>
+          <option value="Fruits">Fruits</option>
+          <option value="Hand Crafts">Hand Crafts</option>
+        </select><br><br>
+
+        <input type="number" style="height: 50px; width: 600px; max-width: 85%;" id="quantity" name="quantity" placeholder="Quantity">
+        <br><br><select id="unit" style="height: 50px; width: 600px; max-width: 85%;" class="form-select form-select-sm"
+          aria-label=".form-select-sm example">
+          <option selected>Select Unit</option>
+          <option value="Kilogram">Kilogram</option>
+          <option value="Gram">Gram</option>
+          <option value="Litre">Litre</option>
+          <option value="Dozen">Dozen</option>
+          <option value="Piece">Piece</option>
+        </select><br><br>
+
+
+        <input type="submit" value="Submit" id="submitform"><br>
+        <h2 id="email"></h2>
+    </div>
+
+
+    <div class="tablediv">
+      <table class="table table-hover" style="color: bisque; width: 80%; border: 2px solid bisque;">
+        <h2 class="heading">Your Listings</h2>
+        <thead>
+          <th>S no.
+          </th>
+          <th>Product</th>
+          <th>Category</th>
+          <th>Quantity</th>
+          <th>Unit</th>
+          <th>Sold</th>
+        </thead>
+        <tbody id="tbody1">
+
+        </tbody>
+      </table>
+    </div>
+    <div class="footer">
+      <h2>We Pray to Grow With You :)</h2>
+      <div class="contact">
+
+        <a href="https://www.facebook.com/profile.php?id=100007019597211"><img src="facebook.png" alt=""></a>
+        <a href="https://www.instagram.com/sidharth_sharma_100/"><img src="instagram.png" alt=""></a>
+        <a href="https://www.linkedin.com/in/sidharth-sharma-3bb107205/"><img src="linkedin.png" alt=""></a>
+        <a href="https://twitter.com/SidSharma100"><img src="twitter.png" alt=""></a>
+      </div>
+      <br>
+      <br>
+      <span style="font-size: 18, ;"> Made By: Team Berozgar</span>
+    </div>
+
+
+
+    </script>
+</body>
+<script src="//code.tidio.co/6lhn3kmjiszzas6xkcf7ubffrutssad7.js" async></script>
+<script src="script.js" type="module">
+
+</script>
+<script src="scriptdasboard.js" type="module"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
+  integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
+  integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
+
+</html>
