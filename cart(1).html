@@ -24,7 +24,7 @@
         <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-transparent" id="page-navigation">
             <div class="container">
                 <!-- Navbar Brand -->
-                <a href="index(1).html" class="navbar-brand">
+                <a href="index.html" class="navbar-brand">
                     <img src="assets/img/logo/krishiconnect-high-resolution-logo-black-on-white-background.png" alt="">
                 </a>
 
@@ -64,21 +64,21 @@
                 </div>
             </div>
         </div>
-    <div class="cart">
-        <h1 class="carttext">Cart Page</h1>
+    <div class="cart" style="background-color: rgba(218, 223, 226, 0.811);">
+        <h1 class="carttext" style="color: black;">Enter Your Details</h1>
         <div class="cartfield carttext">
-            <label class="carttext" for="buyer-name">Name:</label>
-            <input type="text" id="buyer-name" required>
+            
+            <input type="text" placeholder="Your Name" id="buyer-name" required>
         </div>
         <div class="cartfield carttext">
-            <label for="buyer-email">Email:</label>
-            <input type="email" id="buyer-email" required>
+            
+            <input type="email" placeholder="Email" id="buyer-email" required>
         </div>
-        <div id="cart-items" class="carttext"></div>
+        <div id="cart-items" style="width: 50%; padding: 30px;" class="carttext"></div>
         <div id="subtotal" class="carttext"></div>
-        <div class="cartfield"><button class="cartbtn" onclick="emptyCart()">Empty Cart</button>
+        <div class="cartfield"><button class="cartbtn" onclick="emptyCart()" style="border-radius: 3px; color: aliceblue;">Empty Cart</button>
         <button class="cartbtn" onclick="checkout()">Checkout</button>
-        <button onclick="window.location.href='shop(1).html'" class="cartbtn">Continue Shopping</a></button>
+        <button onclick="window.location.href='shop(1).html'" class="cartbtn" style="border-radius: 3px; color: aliceblue;">Continue Shopping</a></button>
         </div>
     </div>
     <footer>
