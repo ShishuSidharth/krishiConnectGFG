@@ -10,24 +10,15 @@ var cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
       var itemElement = document.createElement('div');
       itemElement.classList.add('cartlist');
       itemElement.innerHTML =  "<span>"+item.name+"</span>  <span>"+item.price+"</span><span>"+item.quantity+"</span>";
-  
+
       
       var increaseQuantityButton = document.createElement('button');
       increaseQuantityButton.innerText = '+';
       increaseQuantityButton.onclick = function() {
         item.quantity++;
         updateCartDisplay();
-
       };
       itemElement.appendChild(increaseQuantityButton);
-      var decreasequantitybutton = document.createElement('button');
-      decreasequantitybutton.innerText='-'
-      decreasequantitybutton.onclick=function(){
-        item.quantity--;
-        updateCartDisplay();
-      };
-
-      itemElement.appendChild(decreasequantitybutton)
 
       cartItemsContainer.appendChild(itemElement);
     });
@@ -38,7 +29,7 @@ var cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
         
         cartItems.forEach(function(item) {
           var itemElement = document.createElement('div');
-          itemEleme
+          itemElement.classList.add('cartlist');
           itemElement.innerHTML =  "<span>"+item.name+"</span>  <span>"+item.price+"</span><span>"+item.quantity+"</span>";
   
           
@@ -48,15 +39,7 @@ var cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
             item.quantity++;
             updateCartDisplay();
           };
-          
-          var decreasequantitybutton = document.createElement('button');
-          decreasequantitybutton.innerText='-'
-          decreasequantitybutton.onclick=function(){
-            item.quantity--;
-            updateCartDisplay();
-          };
-  
-          itemElement.appendChild(decreasequantitybutton);
+          itemElement.appendChild(increaseQuantityButton);
   
           cartItemsContainer.appendChild(itemElement);
         });
